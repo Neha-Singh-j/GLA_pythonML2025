@@ -1,10 +1,16 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 import time
 
 
-driver = webdriver.Chrome()
+chrome_options = Options()
+chrome_options.add_argument("--incognito")
+
+
+driver = webdriver.Chrome(service=Service(), options=chrome_options)
 
 url = 'https://www.saucedemo.com/'
 driver.get(url)

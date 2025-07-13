@@ -4,7 +4,7 @@ import time
 
 driver = webdriver.Chrome()
 
-url = "https://www.google.com"
+url = "https://www.amazon.com"
 
 driver.get(url)
 
